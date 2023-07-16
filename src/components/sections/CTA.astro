@@ -41,18 +41,53 @@ import Paragraph from "../shared/Paragraph.astro";
           class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight
           font-bold text-heading-1"
         >
-          Un <span class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">projet</span> ? 
-          Une <span class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">envie</span> ? 
-          Une <span class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">idée</span> ? 
+          Un <span class="text-transparent bg-clip-text bg-primary">projet</span> ? 
+          Une <span class="text-transparent bg-clip-text bg-primary">envie</span> ? 
+          Une <span class="text-transparent bg-clip-text bg-primary">idée</span> ? 
         </h1>
         <Paragraph className={"pt-10"}>
           FJ Amenagement paysages vous accompagne dans toutes les étapes de votre projet,
           de sa conception à sa réalisation.
         </Paragraph>
-        <div class="mx-auto max-w-md sm:max-w-xl pt-10">
-          <Button variant={"primary"}>
+        <div class="mx-auto max-w-md sm:max-w-xl">
+          <!--<Button variant={"primary"}>
             <span class="text-white relative z-[5]">Contactez-nous</span>
-          </Button>
+          </Button>-->
+          <section class="text-gray-600 body-font relative">
+              <div class="container px-5 py-24 mx-auto">
+                <form
+                  name="contact"
+                  method="POST"
+                  action="https://formspree.io/f/mrgwbzbp">
+                  <input type="hidden" name="form-name" value="contact" />
+                  <div class="flex flex-wrap -m-2">
+                    <div class="p-2 w-full">
+                      <div class="relative">
+                        <label class="leading-7 text-sm text-gray-600">Nom & Prénom</label>
+                        <input type="text" id="name" name="name" class="w-full bg-white rounded-2xl border border-gray-300 focus:border-bg-primary focus:ring-2 focus:ring-bg-primary text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                      </div>
+                    </div>
+                    <div class="p-2 w-full">
+                      <div class="relative">
+                        <label class="leading-7 text-sm text-gray-600">Email</label>
+                        <input type="email" id="email" name="email" class="w-full bg-white rounded-2xl border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-bg-primary
+                        bg-primary text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                      </div>
+                    </div>
+                    <div class="p-2 w-full">
+                      <div class="relative">
+                        <label class="leading-7 text-sm text-gray-600">Message</label>
+                        <textarea id="message" name="message" class="w-full bg-white rounded-2xl border border-gray-300 focus:border-bg-primary focus:ring-2 focus:ring-bg-primary
+                        bg-primary h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                      </div>
+                    </div>
+                    <div class="p-2 w-full">
+                      <button type="submit" class="flex mx-auto text-white bg-primary border-0 py-2 px-8 focus:outline-none hover:bg-secondary rounded-2xl text-lg">Envoyer</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
         </div>
       </div>
     </div>
